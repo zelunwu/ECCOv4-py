@@ -209,6 +209,7 @@ def load_ecco_var_from_years_nc(data_dir, var_to_load, \
 
     var_path = Path(data_dir)
     files = list(var_path.glob('**/*nc'))
+    files.sort()
     
     if not less_output:
         print ('--- LOADING %s FROM YEARS NC: %s' % \
@@ -414,6 +415,7 @@ def recursive_load_ecco_var_from_years_nc(data_root_dir,
     var_path = Path(data_root_dir)
     
     files = list(var_path.glob('**/*nc'))
+    files.sort()
 
     all_var_names = []
     
