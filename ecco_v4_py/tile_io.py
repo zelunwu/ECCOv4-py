@@ -205,7 +205,7 @@ def load_ecco_var_from_years_nc(data_dir, var_to_load, \
     elif not isinstance(tiles_to_load, list):
         raise Exception ('tiles_to_load has to be a tuple, int, list or string ' + \
                          'you passed a %s and I cannot handle that' % type(tiles_to_load))
- 
+
 
     var_path = Path(data_dir)
     files = list(var_path.glob('**/*nc'))
